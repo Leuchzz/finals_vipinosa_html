@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+header {
+    background: #333;
+    color: white;
+    padding: 1em 2em;
+    text-align: center;
+}
+.container {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 2em;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+img.avatar {
+    width: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1em;
+}
+h2 {
+    text-align: center;
+}
+.repo-list {
+    list-style: none;
+    padding: 0;
+}
+.repo-item {
+    margin: 1em 0;
+}
+.repo-item a {
+    color: #0366d6;
+    font-weight: bold;
+    text-decoration: none;
+}
+.repo-item a:hover {
+    text-decoration: underline;
+}
+.description {
+    margin-left: 1.5em;
+    color: #555;
+}
+.repo-thumbnail {
+    display: block;
+    background: #f0f8ff;
+    border: 2px solid #0366d6;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(3,102,214,0.08);
+    padding: 1.5em 1em 2.5em 1em; /* extra bottom padding for button */
+    margin: 2em auto 0 auto;
+    max-width: 500px;
+    text-decoration: none;
+    transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+    position: relative;
+    cursor: pointer; /* makes it clear it's clickable */
+}
+.repo-thumbnail:hover {
+    box-shadow: 0 4px 24px rgba(3,102,214,0.18);
+    transform: translateY(-4px) scale(1.03);
+    background: #e6f2ff;
+}
+.repo-thumbnail .repo-list {
+    margin: 0;
+}
+.repo-thumbnail .repo-item span {
+    color: #0366d6;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+/* Add a "View on GitHub" button inside the thumbnail */
+.github-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    position: absolute;
+    left: 50%;
+    bottom: 1em;
+    transform: translateX(-50%);
+    background: #24292e;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5em 1.2em;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(36,41,46,0.08);
+    transition: background 0.2s;
+    pointer-events: none; /* disables pointer events so the parent link works */
+}
+.repo-thumbnail:hover .github-btn {
+    background: #0366d6;
+}
+.github-icon {
+    width: 1.2em;
+    height: 1.2em;
+    fill: currentColor;
+}
