@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leuchzz | Projects</title>
+    <link rel="stylesheet" href="mainstyle.css">
+    <link rel="stylesheet" href="projectstyle.css">
+    <style>
+        .img-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.8);
+    align-items: center;
+    justify-content: center;
+}
+.img-modal-content {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+    display: block;
+    margin: auto;
+}
+.img-modal-close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2100;
+    transition: color 0.2s;
+}
+.img-modal-close:hover {
+    color: #e74c3c;
+}
+    </style>
+</head>
+<body>
+    <header class="app-bar">
+        <div class="app-bar-content">
+            <h1 class="logo">Leuchzz's Portfolio</h1>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="work.html">Work Experience</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="projects-carousel-container">
+        <h2>My Projects</h2>
+        <div class="carousel">
+            <button class="carousel-arrow" id="prevBtn">&#8592;</button>
+            <div class="project-card" id="projectCard">
+                <!-- Project content will be injected here -->
+            </div>
+            <button class="carousel-arrow" id="nextBtn">&#8594;</button>
+        </div>
+        <div id="imgModal" class="img-modal">
+    <span class="img-modal-close" id="imgModalClose">&times;</span>
+    <img class="img-modal-content" id="imgModalImg" src="" alt="Zoomed project image">
+</div>
+    </div>
+    <script src="project.js"></script>
+</body>
+</html>
