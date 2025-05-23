@@ -5,6 +5,7 @@
     border-radius: 12px;
     box-shadow: 0 4px 24px rgba(3,102,214,0.10);
     padding: 2.5em 2em;
+    box-sizing: border-box;
 }
 .resume-header {
     text-align: center;
@@ -34,8 +35,21 @@
     color: #444;
     margin-top: 0.5em;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .resume-container {
+        max-width: 98vw;
         padding: 1em 0.5em;
+    }
+    .resume-header h2 {
+        font-size: 1.3em;
+    }
+    .work-title {
+        font-size: 1em;
+    }
+}
+@media (max-width: 500px) {
+    .resume-container {
+        padding: 0.5em 0.1em;
+        border-radius: 0;
     }
 }

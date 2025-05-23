@@ -5,6 +5,7 @@
     border-radius: 12px;
     box-shadow: 0 4px 24px rgba(3,102,214,0.10);
     padding: 2.5em 2em;
+    box-sizing: border-box;
 }
 .contact-form {
     display: flex;
@@ -23,6 +24,8 @@
     border-radius: 6px;
     font-size: 1em;
     resize: vertical;
+    box-sizing: border-box;
+    width: 100%;
 }
 .contact-form input:focus,
 .contact-form textarea:focus {
@@ -63,10 +66,24 @@
     font-size: 1.1em;
 }
 .google-form-container {
+    width: 100%;
     max-width: 500px;
-    margin: 2em auto;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 24px rgba(3,102,214,0.10);
-    padding: 1em;
+    margin: 0 auto 2em auto;
+    box-sizing: border-box;
+}
+@media (max-width: 700px) {
+    .contact-container {
+        max-width: 98vw;
+        padding: 1em 0.5em;
+    }
+    .google-form-container {
+        max-width: 98vw;
+        padding: 0;
+    }
+}
+@media (max-width: 500px) {
+    .contact-container {
+        padding: 0.5em 0.1em;
+        border-radius: 0;
+    }
 }
